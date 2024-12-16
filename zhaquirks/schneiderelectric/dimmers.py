@@ -15,7 +15,7 @@ from zhaquirks.schneiderelectric import (
 )
 
 (
-    # Note: UNIDIM and DIMMER have unique setttings in Ballast Cluster.
+    # Note: UNIDIM and DIMMER have unique settings in Ballast Cluster.
     QuirkBuilder(SE_MANUF_NAME, "NHROTARY/DIMMER/1")
     .applies_to(SE_MANUF_NAME, "NHROTARY/UNIDIM/1")
     .applies_to(SE_MANUF_NAME, "NHPB/DIMMER/1")
