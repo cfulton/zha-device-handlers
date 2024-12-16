@@ -9,9 +9,9 @@ from zhaquirks.schneiderelectric import (
     SE_MANUF_NAME,
     SEBallast,
     SEBasic,
+    SEControlMode,
     SEOnOff,
     SESpecific,
-    SEControlMode,
 )
 
 (
@@ -37,7 +37,8 @@ from zhaquirks.schneiderelectric import (
         device_class=NumberDeviceClass.DURATION,
         unit=UnitOfTime.SECONDS,
         fallback_name="On Time Reload",
-        translation_key="on_time_reload")
+        translation_key="on_time_reload",
+    )
     .number(
         attribute_name=SEBallast.AttributeDefs.min_level.name,
         cluster_id=SEBallast.cluster_id,
@@ -46,7 +47,8 @@ from zhaquirks.schneiderelectric import (
         max_value=254,
         step=1,
         fallback_name="Min Light Level",
-        translation_key="min_level")
+        translation_key="min_level",
+    )
     .number(
         attribute_name=SEBallast.AttributeDefs.max_level.name,
         cluster_id=SEBallast.cluster_id,
@@ -55,14 +57,16 @@ from zhaquirks.schneiderelectric import (
         max_value=254,
         step=1,
         fallback_name="Max Light Level",
-        translation_key="max_level")
+        translation_key="max_level",
+    )
     .enum(
         attribute_name=SEBallast.AttributeDefs.se_control_mode.name,
         enum_class=SEControlMode,
         cluster_id=SEBallast.cluster_id,
         endpoint_id=3,
         translation_key="control_mode",
-        fallback_name="Control Mode")
+        fallback_name="Control Mode",
+    )
     .add_to_registry()
 )
 
@@ -83,6 +87,7 @@ from zhaquirks.schneiderelectric import (
         unit=UnitOfTime.SECONDS,
         device_class=NumberDeviceClass.DURATION,
         fallback_name="On Time Reload",
-        translation_key="on_time_reload")
+        translation_key="on_time_reload",
+    )
     .add_to_registry()
 )
