@@ -25,7 +25,6 @@ from zhaquirks.schneiderelectric import (
     .replaces(SEBallast, endpoint_id=3)
     .replaces(SEOnOff, endpoint_id=3)
     .replaces(SEBasic, endpoint_id=21)
-    .replaces(SEOnOff, endpoint_id=21, cluster_type=ClusterType.Client)
     .replaces(SESpecific, endpoint_id=21)
     .number(
         attribute_name=SEOnOff.AttributeDefs.se_on_time_reload.name,
