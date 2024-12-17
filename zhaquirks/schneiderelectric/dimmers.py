@@ -3,7 +3,6 @@
 from zigpy.quirks.v2 import QuirkBuilder
 from zigpy.quirks.v2.homeassistant import UnitOfTime
 from zigpy.quirks.v2.homeassistant.number import NumberDeviceClass
-from zigpy.zcl import ClusterType
 
 from zhaquirks.schneiderelectric import (
     SE_MANUF_NAME,
@@ -73,6 +72,7 @@ from zhaquirks.schneiderelectric import (
         cluster_id=SESpecific.cluster_id,
         endpoint_id=21,
         translation_key="switch_indication",
-        fallback_name="Switch Indication")
+        fallback_name="Switch Indication",
+    )
     .add_to_registry()
 )
