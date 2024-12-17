@@ -12,6 +12,7 @@ from zhaquirks.schneiderelectric import (
     SEControlMode,
     SEOnOff,
     SESpecific,
+    SESwitchIndication,
 )
 
 (
@@ -66,6 +67,13 @@ from zhaquirks.schneiderelectric import (
         translation_key="control_mode",
         fallback_name="Control Mode",
     )
+    .enum(
+        attribute_name=SESpecific.AttributeDefs.se_switch_indication.name,
+        enum_class=SESwitchIndication,
+        cluster_id=SESpecific.cluster_id,
+        endpoint_id=21,
+        translation_key="switch_indication",
+        fallback_name="Switch Indication")
     .add_to_registry()
 )
 
@@ -88,5 +96,12 @@ from zhaquirks.schneiderelectric import (
         fallback_name="On Time Reload",
         translation_key="on_time_reload",
     )
+    .enum(
+        attribute_name=SESpecific.AttributeDefs.se_switch_indication.name,
+        enum_class=SESwitchIndication,
+        cluster_id=SESpecific.cluster_id,
+        endpoint_id=21,
+        translation_key="switch_indication",
+        fallback_name="Switch Indication")
     .add_to_registry()
 )
